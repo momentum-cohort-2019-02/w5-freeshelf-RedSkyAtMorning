@@ -1,0 +1,12 @@
+<p>This is the necklist-detail template</p>
+
+{% extends "base_generic.html" %}
+
+{% block content%}
+
+    <h1>Title: {{ Necklace.name }}</h1>
+
+    <p><strong>Description:</strong><br>
+        {{ Necklace.description }}</p>
+
+{% endblock %}

@@ -1,1 +1,30 @@
 <p>This is the base template</p>
+
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Outer Title Hidden
+      {% block title %}This is for the block labeled title{% endblock %}
+  </title>
+{% block meta %}This is for the block labeled meta{% endblock %}
+</head>
+<br>
+
+<body>Start of body
+<br>
+{% block menu %}Block labled menu BUT Maybe I am not allowed a rename!
+        <ul>
+          <li><a href="{% url 'index' %}">Home</a></li>
+          <li><a href="{% url 'bead_list' %}">Beads</a></li>
+          <li><a href="{% url 'matron_list' %}">Matrons</a></li>
+          <li><a href="{% url 'necklace_list' %}">Necklaces</a></li>
+          <li><a href="{% url 'bowl_list' %}">Bowls</a></li>
+        </ul>
+End Menu{% endblock %}
+<br>
+
+{% block content %}This is for the block labeled content{% endblock %}
+</body>

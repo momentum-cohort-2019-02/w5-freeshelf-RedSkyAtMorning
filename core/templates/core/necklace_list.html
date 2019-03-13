@@ -1,0 +1,20 @@
+<p>This is the necklace-list template</p>
+
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Necklace List</h1>
+  {% if necklace_list %}
+  <ul>
+    {% for necklace in necklace_list %}
+      <li>
+         {{necklace.name}}
+         <a href="{{ necklace.get_absolute_url }}">{{ necklace.name }}</a><br>
+      </li>
+      
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are none in this project.</p>
+  {% endif %}       
+{% endblock %}

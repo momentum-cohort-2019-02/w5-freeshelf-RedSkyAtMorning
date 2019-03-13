@@ -1,0 +1,20 @@
+<p>This is the bowl-list template</p>
+
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Bowl List</h1>
+  {% if bowl_list %}
+  <ul>
+    {% for bowl in bowl_list %}
+      <li>
+         {{bowl.name}}
+         <a href="{{ bowl.get_absolute_url }}">{{ bowl.name }}</a><br>
+      </li>
+      
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are none in this project.</p>
+  {% endif %}       
+{% endblock %}
