@@ -1,13 +1,13 @@
 <p>This is the bead-detail template</p>
 
 
-{% extends "base_generic.html" %}
+{% extends "base.html" %}
 
 {% block content%}
 
-    <h1>Title: {{ Bead.name }}</h1>
+    <h1>Name: {{ bead.name }}</h1>
 
     <p><strong>Description:</strong><br>
-        {{ Bead.description }}</p>
+        {{ bead.description }}</p>
 
 {% endblock %}

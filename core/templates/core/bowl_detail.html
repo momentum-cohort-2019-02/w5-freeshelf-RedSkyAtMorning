@@ -1,13 +1,13 @@
 <p>This is the bowl-detail template</p>
 
 
-{% extends "base_generic.html" %}
+{% extends "base.html" %}
 
 {% block content%}
 
-    <h1>Title: {{ Bowl.name }}</h1>
+    <h1>Name: {{ bowl.name }}</h1>
 
     <p><strong>Description:</strong><br>
-        {{ Bowl.description }}</p>
+        {{ bowl.description }}</p>
 
 {% endblock %}
