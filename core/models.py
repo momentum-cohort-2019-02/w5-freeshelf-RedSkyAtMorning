@@ -48,6 +48,7 @@ class Necklace(models.Model):
         return self.name
 
 class Matron(models.Model):
+    userid = models.OneToOneField(User, on_delete=models.PROTECT, default=1)
     name = models.CharField(max_length=100)
     description = models.TextField(max_length=1000,null=True, blank=True)
 

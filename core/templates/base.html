@@ -4,6 +4,7 @@
 <!DOCTYPE html>
 <html>
 
+<hr>
 <head>
   <meta charset="UTF-8">
   <title>Outer Title Hidden
@@ -11,10 +12,10 @@
   </title>
 {% block meta %}This is for the block labeled meta{% endblock %}
 </head>
-<br>
 
-<body>Start of body
-<br>
+
+<hr>
+<body>
 {% block menu %}Block labled menu BUT Maybe I am not allowed a rename!
         <ul>
           <li><a href="{% url 'index' %}">Home</a></li>
@@ -24,7 +25,22 @@
           <li><a href="{% url 'bowl_list' %}">Bowls</a></li>
         </ul>
 End Menu{% endblock %}
-<br>
+
+<hr>
+{% csrf_token %}
+{% if request.user.is_authenticated %}
+            <li>
+              {{ user.username }}
+            </li>
+            <li>
+              <a href="{% url 'auth_logout' %}">Logout</a>
+            </li>            
+          {% else %}
+            <li>
+              <a href="{% url 'auth_login' %}">Register / Login</a>
+            </li>
+          {% endif %}
+
 <hr>
 {% block content %}This is for the block labeled content{% endblock %}
 </body>

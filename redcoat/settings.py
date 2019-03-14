@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'registration',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -38,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core.apps.CoreConfig',
-    'registration',
     ]
 
 MIDDLEWARE = [
@@ -121,5 +121,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# From Registration Redux
 ACCOUNT_ACTIVATION_DAYS = 7
 REGISTRATION_DEFAULT_FROM_EMAIL = "This string is from settings.py REGISTRATION_DEFAULT_FROM_EMAIL"
+#LOGIN_REDIRECT_URL = ('..')
