@@ -1,0 +1,23 @@
+<p>This is the drumming_list template</p>
+
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Drumming List</h1>
+  {% if drumming_list %}
+  <ul>
+    {% for durmming in drumming_list %}
+      <li>
+         {{ drumming.name }}
+         <a href="{{ bead.get_absolute_url }}">{{ drumming.name }}</a>, {{ drumming.pk }}<br>
+      </li>
+      
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are none in this project.</p>
+  {% endif %}   
+
+  <p>END LIST  BLOCK</p>
+<hr>    
+{% endblock %}

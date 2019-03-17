@@ -1,15 +1,15 @@
-<p>This is the bead-list template</p>
+<p>This is the dress_list template</p>
 
 {% extends "base.html" %}
 
 {% block content %}
-  <h1>Bead List</h1>
-  {% if bead_list %}
+  <h1>Dress List</h1>
+  {% if dress_list %}
   <ul>
-    {% for bead in bead_list %}
+    {% for dress in dress_list %}
       <li>
-         {{ bead.name }}
-         <a href="{{ bead.get_absolute_url }}">{{ bead.name }}</a>, {{ bead.pk }}<br>
+         {{ dress.name }}
+         <a href="{{ dress.get_absolute_url }}">{{ dress.name }}</a>, {{ dress.pk }}<br>
       </li>
       
     {% endfor %}

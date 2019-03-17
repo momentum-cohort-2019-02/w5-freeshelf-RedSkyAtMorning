@@ -1,0 +1,13 @@
+<p>This is the shoe_detail template</p>
+
+
+{% extends "base.html" %}
+
+{% block content%}
+
+    <h1>Name: {{ shoe.name }}</h1>
+
+    <p><strong>Description:</strong><br>
+        {{ shoe.description }}</p>
+
+{% endblock %}

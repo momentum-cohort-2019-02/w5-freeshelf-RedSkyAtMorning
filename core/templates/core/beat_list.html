@@ -1,15 +1,15 @@
-<p>This is the bead-list template</p>
+<p>This is the beat_list template</p>
 
 {% extends "base.html" %}
 
 {% block content %}
-  <h1>Bead List</h1>
-  {% if bead_list %}
+  <h1>Beat List</h1>
+  {% if beat_list %}
   <ul>
-    {% for bead in bead_list %}
+    {% for beat in beat_list %}
       <li>
-         {{ bead.name }}
-         <a href="{{ bead.get_absolute_url }}">{{ bead.name }}</a>, {{ bead.pk }}<br>
+         {{ beat.name }}
+         <a href="{{ beat.get_absolute_url }}">{{ beat.name }}</a>, {{ beat.pk }}<br>
       </li>
       
     {% endfor %}

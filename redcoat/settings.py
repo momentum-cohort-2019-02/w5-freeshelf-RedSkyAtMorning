@@ -123,5 +123,15 @@ STATIC_URL = '/static/'
 
 # From Registration Redux
 ACCOUNT_ACTIVATION_DAYS = 7
-REGISTRATION_DEFAULT_FROM_EMAIL = "This string is from settings.py REGISTRATION_DEFAULT_FROM_EMAIL"
-#LOGIN_REDIRECT_URL = ('..')
+#REGISTRATION_DEFAULT_FROM_EMAIL = "This string is from settings.py REGISTRATION_DEFAULT_FROM_EMAIL"
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+#'REGISTRATION_AUTO_LOGIN = True
+#REGISTRATION_USE_SITE_EMAIL = True
+#REGISTRATION_SITE_USER_EMAIL = meanderingjasmine@gmail.com
+LOGIN_REDIRECT_URL = ('/')
+
+
+# HEROKU NOTES
+# #django_heroku.settings(local(s))
+#and something at the topc. 
+#git generate...

@@ -1,1 +1,25 @@
 <p>This is the matron-list template</p>
+
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Matron List</h1>
+  {% if matron_list %}
+  <ul>
+    {% for matron in matron_list %}
+      <li>
+         {{ matron.name }}
+         <a href="{{ matron.get_absolute_url }}">{{ matron.name }}</a>, {{ matron.pk }}<br>
+      </li>
+      
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are none in this project.</p>
+  {% endif %}   
+
+  <a href="{% url 'matron_create' %}">Add Matron</a>
+
+  <p>END LIST  BLOCK</p>
+<hr>    
+{% endblock %}

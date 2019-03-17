@@ -1,0 +1,13 @@
+<p>This is the outfitting_detail template</p>
+
+
+{% extends "base.html" %}
+
+{% block content%}
+
+    <h1>Name: {{ outfitting.name }}</h1>
+
+    <p><strong>Description:</strong><br>
+        {{ outfitting.description }}</p>
+
+{% endblock %}
